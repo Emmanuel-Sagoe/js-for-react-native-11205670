@@ -8,6 +8,19 @@ function processArray(arr) {
     });
 }
 
+function formatArrayStrings(strings, numbers) {
+    if (strings.length !== numbers.length) {
+        throw new Error('The arrays must be of the same length');
+    }
+
+    return strings.map((str, index) => {
+        if (numbers[index] % 2 === 0) {
+            return str.toUpperCase();
+        } else {
+            return str.toLowerCase();
+        }
+    });
+}
 
 
 
